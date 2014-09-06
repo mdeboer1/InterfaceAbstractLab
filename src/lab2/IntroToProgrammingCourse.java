@@ -8,27 +8,12 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
-    private String courseName;
-    private String courseNumber;
+public class IntroToProgrammingCourse implements ProgrammingCourse {
     private double credits;
+    String courseNumber, courseName;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public final void setCourseNumber(String courseNumber) {
-        if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseNumber = courseNumber;
+    public IntroToProgrammingCourse() {
+        super();
     }
 
     public double getCredits() {
@@ -44,8 +29,17 @@ public class IntroToProgrammingCourse {
         this.credits = credits;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public String getCourseNumber() {
+        return courseNumber;
+    }
+
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
     }
 
     public final void setCourseName(String courseName) {
@@ -57,5 +51,8 @@ public class IntroToProgrammingCourse {
         this.courseName = courseName;
     }
 
+    public String getCourseName() {
+        return courseName;
+    }
     
 }
