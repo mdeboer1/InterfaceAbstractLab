@@ -9,20 +9,17 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends ProgrammingCourse {
-    String courseName;
-    private String courseNumber;
+    
     private double credits;
     private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        super(courseName);
-        this.courseNumber = courseNumber;
+    public AdvancedJavaCourse() {
+        super();
     }
 
     public String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
-
 
     public String getPrerequisites() {
         return prerequisites;
@@ -45,13 +42,8 @@ public class AdvancedJavaCourse extends ProgrammingCourse {
         }
         this.credits = credits;
     }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
     
+    public double getCredits(){
+        return credits;
+    }
 }
