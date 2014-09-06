@@ -5,7 +5,7 @@
  */
 
 package lab1;
-
+import java.util.Scanner;
 /**
  *
  * @author mdeboer1
@@ -14,5 +14,80 @@ public class Startup {
     
     public static void main (String[] args){
         
+        String courseName, courseNumber, prerequisite;
+        double credits;
+        Scanner keyboard = new Scanner(System.in);
+        
+        //Use Liskov's Substitution Principle
+        
+        ProgrammingCourse a = new IntroToProgrammingCourse();
+        ProgrammingCourse b = new IntroJavaCourse();
+        ProgrammingCourse c = new AdvancedJavaCourse();
+        
+        //Use standard object instantiation
+        IntroToProgrammingCourse d = new IntroToProgrammingCourse();
+        IntroJavaCourse e = new IntroJavaCourse();
+        AdvancedJavaCourse f = new AdvancedJavaCourse();
+        
+        System.out.println("Enter in the course number.");
+        courseNumber = keyboard.nextLine();
+        
+        System.out.println("Enter in the course name.");
+        courseName = keyboard.nextLine();
+        
+        System.out.println("Enter in the prerequisite, if any.");
+        prerequisite = keyboard.nextLine();
+        
+        System.out.println("Enter in the number of credits.");
+        credits = Double.parseDouble(keyboard.nextLine());
+        
+        a.setCourseNumber(courseNumber);
+        a.setCourseName(courseName);
+        a.setCredits(credits);
+        
+        System.out.println(a.getCourseName() + " " + a.getCourseNumber() + " " +
+                a.getCredits());
+        
+        b.setCourseNumber(courseNumber);
+        b.setCourseName(courseName);
+        b.setCredits(credits);
+        ((IntroJavaCourse)b).setPrerequisites(prerequisite);
+        
+        System.out.println(b.getCourseName() + " " + b.getCourseNumber() + " " +
+                b.getCredits() + " " + ((IntroJavaCourse)b).getPrerequisites());
+        
+        c.setCourseNumber(courseNumber);
+        c.setCourseName(courseName);
+        c.setCredits(credits);
+        ((AdvancedJavaCourse)c).setPrerequisites(prerequisite);
+        
+        System.out.println(c.getCourseName() + " " + c.getCourseNumber() + " " +
+                c.getCredits() + " " + ((AdvancedJavaCourse)c).getPrerequisites());
+        
+        //With Liskov's Principle, methods not in the superclass are not available
+        //to be used by the object without casting it first
+        
+        d.setCourseNumber(courseNumber);
+        d.setCourseName(courseName);
+        d.setCredits(credits);
+        
+        System.out.println(d.getCourseName() + " " + d.getCourseNumber() + " " +
+                d.getCredits());
+        
+        e.setCourseNumber(courseNumber);
+        e.setCourseName(courseName);
+        e.setCredits(credits);
+        e.setPrerequisites(prerequisite);
+        
+        System.out.println(e.getCourseName() + " " + e.getCourseNumber() + " " +
+                e.getCredits() + " " + e.getPrerequisites());
+        
+        f.setCourseNumber(courseNumber);
+        f.setCourseName(courseName);
+        f.setCredits(credits);
+        f.setPrerequisites(prerequisite);
+        
+        System.out.println(f.getCourseName() + " " + f.getCourseNumber() + " " +
+                f.getCredits() + " " + f.getPrerequisites());
     }
 }
