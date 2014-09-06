@@ -7,7 +7,9 @@
 package lab2;
 import java.util.Scanner;
 /**
- *
+ * As with lab1, when using Liskov's Substitution Principle, any method not
+ * contained in the parent class is not immediately available to the object, casting
+ * is needed.  
  * @author meboer1
  */
 public class Startup {

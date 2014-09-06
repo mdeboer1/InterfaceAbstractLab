@@ -3,7 +3,8 @@ package lab2;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * Methods set/get all properties for the intro class.  JOptionPane used for all
+ * error output.
  *
  * @author      your name goes here
  * @version     1.00

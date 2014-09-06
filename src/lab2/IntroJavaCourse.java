@@ -3,7 +3,8 @@ package lab2;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * Methods set and get all properties.  JOptionPane and System.out.println used
+ * for all error message output.
  *
  * @author      your name goes here
  * @version     1.00

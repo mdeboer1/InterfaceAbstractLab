@@ -7,7 +7,7 @@
 package lab2;
 
 /**
- *
+ * This is an interface for implementation in other course subclasses.
  * @author mdeboer1
  */
 public interface ProgrammingCourse {
