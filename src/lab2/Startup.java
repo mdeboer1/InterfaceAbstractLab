@@ -43,15 +43,15 @@ public class Startup {
         System.out.println("Enter in the number of credits.");
         credits = Double.parseDouble(keyboard.nextLine());
         
-        a.setCourseNumber(courseNumber);
-        a.setCourseName(courseName);
+        ((IntroToProgrammingCourse)a).setCourseNumber(courseNumber);
+        ((IntroToProgrammingCourse)a).setCourseName(courseName);
         ((IntroToProgrammingCourse)a).setCredits(credits);
         
         System.out.println(a.getCourseName() + " " + a.getCourseNumber() + " " +
                 ((IntroToProgrammingCourse)a).getCredits());
         
-        b.setCourseNumber(courseNumber);
-        b.setCourseName(courseName);
+        ((IntroJavaCourse)b).setCourseNumber(courseNumber);
+        ((IntroJavaCourse)b).setCourseName(courseName);
         ((IntroJavaCourse)b).setCredits(credits);
         ((IntroJavaCourse)b).setPrerequisites(prerequisite);
         
@@ -59,8 +59,8 @@ public class Startup {
                 ((IntroJavaCourse)b).getCredits() + " " + 
                 ((IntroJavaCourse)b).getPrerequisites());
         
-        c.setCourseNumber(courseNumber);
-        c.setCourseName(courseName);
+        ((AdvancedJavaCourse)c).setCourseNumber(courseNumber);
+        ((AdvancedJavaCourse)c).setCourseName(courseName);
         ((AdvancedJavaCourse)c).setCredits(credits);
         ((AdvancedJavaCourse)c).setPrerequisites(prerequisite);
         
