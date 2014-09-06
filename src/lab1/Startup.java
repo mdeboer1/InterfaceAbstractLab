@@ -7,7 +7,17 @@
 package lab1;
 import java.util.Scanner;
 /**
- *
+ * This class is used to test Lab1 package.  In use is standard instantiation 
+ * and Liskov's Substitution Principle.  In the latter, methods in the subclass
+ * are not directly available to the object, since it was created as a superclass
+ * type.  Because of this, casting the object name to the correct subclass type 
+ * was required before access would be allowed.  This was not the case obviously
+ * with the standard way of object creation.  This creates more coding, though
+ * was not difficult to overcome.  An advantage of this is when both classes have
+ * the same methods, overridden in the subclass, that may work differently than
+ * in the superclass.  This allows the flexibility to use the correct method for
+ * the situation.  Though this could be done by using the super.methodName as well.
+ * 
  * @author mdeboer1
  */
 public class Startup {
