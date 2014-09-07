@@ -17,6 +17,10 @@ public class IntroToProgrammingCourse implements ProgrammingCourse {
         super();
     }
 
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
+    
     public double getCredits() {
         return credits;
     }

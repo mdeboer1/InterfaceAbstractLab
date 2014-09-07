@@ -19,5 +19,7 @@ public interface ProgrammingCourse {
     public void setCourseName(String courseName);
     
     public String getCourseName();
+    
+    public String getCapitalizedCourseName();
 
 }

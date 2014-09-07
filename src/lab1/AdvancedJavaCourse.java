@@ -17,10 +17,6 @@ public class AdvancedJavaCourse extends ProgrammingCourse {
         super();
     }
 
-    public String getCapitalizedCourseName() {
-        return this.getCourseName().toUpperCase();
-    }
-
     public String getPrerequisites() {
         return prerequisites;
     }

@@ -20,6 +20,10 @@ public abstract class ProgrammingCourse {
         
     }
 
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
+    
     public String getCourseNumber(){
         return courseNumber;
     }
